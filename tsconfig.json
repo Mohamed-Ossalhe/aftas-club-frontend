@@ -30,7 +30,7 @@
       "@interfaces/*": ["app/interfaces/*"],
       "@layouts/*": ["app/layouts/*"],
       "@pages/*": ["app/pages/*"],
-      "@routes/*": ["app/layouts/*"],
+      "@routes/*": ["app/routes/*"],
       "@services/*": ["app/services/*"],
       "@types/*": ["app/types/*"],
     }
