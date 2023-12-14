@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CompetitionComponent } from '@modules/competition/pages/competition/competition.component';
 
 const routes: Routes = [
   {
-    path: "",
-    loadChildren: () => import("@layouts/layouts.module").then(m => m.LayoutsModule)
+    path:"",
+    component: CompetitionComponent,
   }
 ];
 
@@ -12,4 +13,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class RoutesRoutingModule { }
+export class CompetitionRoutingModule { }
