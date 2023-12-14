@@ -29,7 +29,7 @@
       "@enums/*": ["app/enums/*"],
       "@interfaces/*": ["app/interfaces/*"],
       "@layouts/*": ["app/layouts/*"],
-      "@pages/*": ["app/pages/*"],
+      "@modules/*": ["app/modules/*"],
       "@routes/*": ["app/routes/*"],
       "@services/*": ["app/services/*"],
       "@types/*": ["app/types/*"],
