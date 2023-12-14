@@ -1,1 +1,13 @@
-<p>dashboard-layout works!</p>
+<div class="dashboard">
+    <div class="dashboard__layout__container">
+        <div class="dashbaord__wrapper bg-gray-900 text-white h-screen flex overflow-hidden text-sm">
+            <app-sidebar></app-sidebar>
+            <div class="flex-grow overflow-hidden h-full flex flex-col">
+                <app-header></app-header>
+                <main>
+                    <!-- <router-outlet></router-outlet> -->
+                </main>
+            </div>
+        </div>
+    </div>
+</div>
