@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Competition } from '@app/interfaces/competition';
 
 @Component({
   selector: 'app-inner-sidebar',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./inner-sidebar.component.less']
 })
 export class InnerSidebarComponent {
-
+  @Input() data!: Competition[];
 }
