@@ -6,11 +6,13 @@ import { ComponentsModule } from '@components/components.module';
 import { CompetitionComponent } from './pages/competition/competition.component';
 import { ServicesModule } from '@app/services/services.module';
 import { CompetitionService } from '@app/services/competition/competition.service';
+import { CreateCompetitionComponent } from './pages/create-competition/create-competition.component';
 
 
 @NgModule({
   declarations: [
-    CompetitionComponent
+    CompetitionComponent,
+    CreateCompetitionComponent
   ],
   imports: [
     CommonModule,
