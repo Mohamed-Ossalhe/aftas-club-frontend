@@ -7,39 +7,39 @@
             <div class="rounded shadow-lg p-4 px-4 md:p-8 mb-6">
                 <div class="grid gap-4 gap-y-2 text-sm grid-cols-1">
 
-                    <div class="lg:col-span-2">
+                    <form [formGroup]="competitionForm" (submit)="submit()" class="lg:col-span-2">
                         <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-6">
                             <div class="md:col-span-6">
                                 <label for="location">Competition Location</label>
-                                <input type="text" name="location" id="location" placeholder="Competition Location" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 text-gray-800" value="" />
+                                <input type="text" name="location" id="location" placeholder="Competition Location" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 text-gray-800" value="" formControlName="location" />
                             </div>
 
                             <div class="md:col-span-6">
                                 <label for="date">Competition Date</label>
-                                <input type="date" name="date" id="date" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 text-gray-800" value="" placeholder="email@domain.com" />
+                                <input type="date" name="date" id="date" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 text-gray-800" value="" placeholder="email@domain.com" formControlName="date"/>
                             </div>
 
                             <div class="md:col-span-3">
                                 <label for="numberOfParticipants">Number of Participants</label>
-                                <input type="number" name="numberOfParticipants" id="numberOfParticipants" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 text-gray-800" value="10" placeholder="" min="10" max="50" />
+                                <input type="number" name="numberOfParticipants" id="numberOfParticipants" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 text-gray-800" placeholder="" min="10" max="50" formControlName="numberOfParticipants" />
                             </div>
 
                             <div class="md:col-span-3">
                                 <label for="amount">Amount</label>
-                                <input type="number" name="amount" id="amount" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 text-gray-800" value="100" placeholder="" min="100" />
+                                <input type="number" name="amount" id="amount" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 text-gray-800" placeholder="" min="100" formControlName="amount" />
                             </div>
 
                             <div class="md:col-span-3">
                                 <label for="statTime">Start Time</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input type="time" name="startTime" id="startTime" placeholder="Start Time" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input type="time" name="startTime" id="startTime" placeholder="Start Time" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" formControlName="startTime" />
                                 </div>
                             </div>
 
                             <div class="md:col-span-3">
                                 <label for="endTime">End Time</label>
                                 <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input type="time" name="endTime" id="endTime" placeholder="End Time" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" />
+                                    <input type="time" name="endTime" id="endTime" placeholder="End Time" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" formControlName="endTime" />
                                 </div>
                             </div>
                     
@@ -50,7 +50,7 @@
                             </div>
 
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
