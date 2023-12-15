@@ -13,7 +13,6 @@ export class CompetitionComponent {
 
   public constructor(private _service: CompetitionService) {
     this.getAllCompetitions();
-    
   }
 
   private getAllCompetitions() {

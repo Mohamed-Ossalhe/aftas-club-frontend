@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardLayoutComponent } from './dashboard-layout/dashboard-layout.component';
 import { ComponentsModule } from '@components/components.module';
 import { LayoutsRoutingModule } from './layouts-routing.module';
+import { AngularToastifyModule } from 'angular-toastify';
 
 
 
@@ -13,7 +14,8 @@ import { LayoutsRoutingModule } from './layouts-routing.module';
   imports: [
     CommonModule,
     ComponentsModule,
-    LayoutsRoutingModule
+    LayoutsRoutingModule,
+    AngularToastifyModule
   ]
 })
 export class LayoutsModule { }

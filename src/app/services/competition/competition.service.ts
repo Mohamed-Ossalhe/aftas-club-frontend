@@ -19,4 +19,8 @@ export class CompetitionService {
     return this._http.get<Competition[]>(`${environment.API_URL}/competitions`);
   }
 
+  public create(body: Competition): Observable<Competition> {
+    return this._http.post<Competition>(`${environment.API_URL}/competitions/create`, body);
+  }
+
 }
