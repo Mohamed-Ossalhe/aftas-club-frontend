@@ -1,13 +1,14 @@
 <div class="flex-grow flex h-full overflow-x-hidden">
     <div class="inner-sidebar h-full pb-14">
-        <app-inner-sidebar [data]="competitions"></app-inner-sidebar>
+        <app-inner-sidebar [data]="competitions" [dataObject]="dataObject" [currentPage]="page"></app-inner-sidebar>
     </div>
-    <div class="data-section w-full">
-        <app-heading></app-heading>
+    <div *ngIf="message == ''" class="data-section w-full">
+        <app-heading [data]="members"></app-heading>
         <div class="sm:p-7 p-4">
-            <app-filters></app-filters>
-            <app-table></app-table>
-            <app-pagination></app-pagination>
+            <app-table [data]="members"></app-table>
         </div>
+    </div>
+    <div *ngIf="message" class="w-full h-full flex items-center justify-center">
+        <p>{{message}}</p>
     </div>
 </div>

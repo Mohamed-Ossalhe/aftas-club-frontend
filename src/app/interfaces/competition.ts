@@ -1,3 +1,5 @@
+import { Ranking } from "./ranking"
+
 export interface Competition {
     code: string,
     date: string,
@@ -6,6 +8,5 @@ export interface Competition {
     numberOfParticipants: number,
     location: string,
     amount: number
-    // hunting: Array<string>,
-    // ranking: Array<string>
+    ranking: Ranking[]
 }

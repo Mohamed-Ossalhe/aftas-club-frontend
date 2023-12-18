@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-filters',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./filters.component.less']
 })
 export class FiltersComponent {
-
+  @Input() data: any;
+  @Input() currentPage!: number;
 }

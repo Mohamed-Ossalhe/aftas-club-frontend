@@ -9,6 +9,10 @@ const routes: Routes = [
     component: CompetitionComponent,
   },
   {
+    path:"competitions",
+    component: CompetitionComponent,
+  },
+  {
     path: "competitions/create",
     component: CreateCompetitionComponent
   }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Competition } from '@app/interfaces/competition';
 
 @Component({
   selector: 'app-heading',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./heading.component.less']
 })
 export class HeadingComponent {
-
+  @Input() data!:Competition;
 }

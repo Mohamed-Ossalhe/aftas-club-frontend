@@ -8,4 +8,6 @@ import { Competition } from '@app/interfaces/competition';
 })
 export class InnerSidebarComponent {
   @Input() data!: Competition[];
+  @Input() dataObject!:any;
+  @Input() currentPage!: number;
 }
