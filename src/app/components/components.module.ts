@@ -7,6 +7,7 @@ import { TableComponent } from './table/table.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { HeadingComponent } from './heading/heading.component';
 import { FiltersComponent } from './filters/filters.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -21,7 +22,8 @@ import { FiltersComponent } from './filters/filters.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    RouterModule
   ],
   exports: [
     InnerSidebarComponent,

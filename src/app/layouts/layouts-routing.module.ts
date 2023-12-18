@@ -11,6 +11,10 @@ const routes: Routes = [
             {
                 path: "",
                 loadChildren: () => import("@modules/competition/competition.module").then(m => m.CompetitionModule)
+            },
+            {
+                path: "members",
+                loadChildren: () => import("@modules/member/member.module").then(m => m.MemberModule)
             }
         ]
     }
