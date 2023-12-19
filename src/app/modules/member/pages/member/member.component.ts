@@ -21,7 +21,7 @@ export class MemberComponent {
     this._router.queryParams.subscribe({
       next: (params) => {
         this.page = params["page"] || 0;
-        this.__service.getAll(this.page).subscribe((response: any) => {
+        this.__service.getAllPaginated(this.page).subscribe((response: any) => {
           this.members = response.content;
           this.dataObject = response;
           console.log(response);
