@@ -12,13 +12,21 @@ export class MemberService {
   constructor(private _http: HttpClient) { }
 
   /**
-   * 
+   * gets all resources paginated
    * @param page pagination page number
    * @param size elements size to be paginated
    * @returns - {@link Observable}<{@link Member}>
    */
-  public getAll(page: number, size: number = 6): Observable<Member[]> {
+  public getAllPaginated(page: number, size: number = 6): Observable<Member[]> {
     return this._http.get<Member[]>(`${environment.API_URL}/members?page=${page != 0 ? page - 1 : page}&size=${size}`);
+  }
+
+  /**
+   * gets all resources as array
+   * @returns - {@link Observable}<{@link Member}>
+   */
+  public getAll(): Observable<Member[]> {
+    return this._http.get<Member[]>(`${environment.API_URL}/members/all`);
   }
   
   /**
