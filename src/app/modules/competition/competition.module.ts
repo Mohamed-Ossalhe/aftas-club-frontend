@@ -7,12 +7,14 @@ import { ComponentsModule } from '@components/components.module';
 import { CompetitionComponent } from './pages/competition/competition.component';
 import { CompetitionService } from '@app/services/competition/competition.service';
 import { CreateCompetitionComponent } from './pages/create-competition/create-competition.component';
+import { AssignMemberComponent } from './pages/assign-member/assign-member.component';
 
 
 @NgModule({
   declarations: [
     CompetitionComponent,
-    CreateCompetitionComponent
+    CreateCompetitionComponent,
+    AssignMemberComponent
   ],
   imports: [
     CommonModule,

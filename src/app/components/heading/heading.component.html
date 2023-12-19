@@ -3,6 +3,12 @@
         <div class="flex items-center text-3xl text-gray-900 dark:text-white">
             {{data.location}}
         </div>
+        <a routerLink="/competitions/{{data.code}}/assign" class="ml-5">
+            <button class="flex items-center justify-center gap-2 h-8 px-3 rounded-md shadow text-white bg-blue-500">
+                <i class="bx bx-plus"></i>
+                add Member to Competition
+            </button>
+        </a>
         <div class="ml-auto sm:flex hidden items-center justify-end">
             <div class="text-right">
                 <div class="text-xs text-gray-400 dark:text-gray-400">Total Members</div>
@@ -11,7 +17,8 @@
         </div>
     </div>
     <div class="flex items-center space-x-3 sm:mt-7 mt-4">
-        <a routerLink="/" class="px-3 border-b-2 border-blue-500 text-blue-500 dark:text-white dark:border-white pb-1.5">Members</a>
-        <a routerLink="/competitions/podium" class="px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5">Podium</a>
+        <a routerLink="/" routerLinkActive="border-blue-500 text-blue-500 dark:text-white dark:border-white" class="px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5">Members</a>
+        <a routerLink="/competition/hunting" routerLinkActive="border-blue-500 text-blue-500 dark:text-white dark:border-white" class="px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5">Hunting</a>
+        <a routerLink="/competition/podium" routerLinkActive="border-blue-500 text-blue-500 dark:text-white dark:border-white" class="px-3 border-b-2 border-transparent text-gray-600 dark:text-gray-400 pb-1.5">Podium</a>
     </div>
 </div>
