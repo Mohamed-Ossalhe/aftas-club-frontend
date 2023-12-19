@@ -2,54 +2,48 @@
     <div class="container max-w-screen-lg mx-auto">
         <div>
             <h2 class="font-semibold text-xl text-white">Assign Member to Competition</h2>
-            <p class="text-gray-500 mb-6">All Fields with (<span class="text-red-500 font-medium"> * </span>) are required.</p>
+            <p class="text-gray-500 mb-6">All Fields with (<span class="text-red-500 font-medium"> * </span>) are
+                required.</p>
 
             <div class="rounded shadow-lg p-4 px-4 md:p-8 mb-6">
                 <div class="grid gap-4 gap-y-2 text-sm grid-cols-1">
 
-                    <form [formGroup]="formGroup" (submit)="submit()" class="lg:col-span-2">
+                    <form [formGroup]="formGroup" (ngSubmit)="submit()" class="lg:col-span-2">
                         <div class="grid gap-4 gap-y-2 text-sm grid-cols-1 md:grid-cols-6">
                             <div class="md:col-span-6">
-                                <label for="name">Member Name <span class="text-red-500">*</span></label>
-                                <input type="text" name="name" id="name" placeholder="Member Name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 text-gray-800" value="" formControlName="name" />
+                                <label for="name">Member <span class="text-red-500">*</span></label>
+                                <input type="text" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 text-gray-800" value="" placeholder="Member Name" #name (keyup)="filterMembers(name.value)" />
+                                <select *ngIf="members.length > 0" name="name" formControlName="name" id="name" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 text-gray-800">
+                                    <option *ngFor="let member of members" value="{{member.num}}">{{member.name}} {{member.familyName}}</option>
+                                </select>
+                                <input *ngIf="members.length == 0" type="text" value="No Member Found" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 text-gray-800" readonly>
                             </div>
 
                             <div class="md:col-span-6">
-                                <label for="familyName">Family Name <span class="text-red-500">*</span></label>
-                                <input type="text" name="familyName" id="familyName" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 text-gray-800" value="" placeholder="Member Family Name" formControlName="familyName"/>
+                                <label for="competition">Compition <span class="text-red-500"></span></label>
+                                <input type="text" name="competition" id="competition"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-300 text-gray-600"
+                                    placeholder="Member Family Name" formControlName="competition" readonly/>
                             </div>
 
                             <div class="md:col-span-3">
-                                <label for="accessionDate">Accession Date <span class="text-red-500">*</span></label>
-                                <input type="date" name="accessionDate" id="accessionDate" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 text-gray-800" placeholder="" formControlName="accessionDate" />
+                                <label for="rank">Rank <span class="text-red-500"></span></label>
+                                <input type="number" name="rank" id="rank"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-300 text-gray-800" placeholder="Rank"
+                                    formControlName="rank" max="0" min="0"readonly />
                             </div>
 
                             <div class="md:col-span-3">
-                                <label for="nationality">Nationality <span class="text-red-500">*</span></label>
-                                <input type="text" name="nationality" id="nationality" class="h-10 border mt-1 rounded px-4 w-full bg-gray-50 text-gray-800" placeholder="Nationality" formControlName="nationality" />
+                                <label for="score">Score <span class="text-red-500"></span></label>
+                                <input type="number" name="score" id="score"
+                                    class="h-10 border mt-1 rounded px-4 w-full bg-gray-300 text-gray-800"
+                                    placeholder="Score" formControlName="score" max="0" min="0" readonly/>
                             </div>
 
-                            <div class="md:col-span-3">
-                                <label for="identityDocument">Identity Document <span class="text-red-500">*</span></label>
-                                <div class="h-10 bg-gray-50 flex border border-gray-200 text-black rounded items-center mt-1">
-                                    <select id="identityDocument" name="identityDocument" formControlName="identityDocument" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md">
-                                        <option value="CIN">CIN</option>
-                                        <option value="CART_RESIDENCE">CART RESIDENCE</option>
-                                        <option value="PASSPORT">PASSPORT</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="md:col-span-3">
-                                <label for="identityNumber">Identity Number <span class="text-red-500">*</span></label>
-                                <div class="h-10 bg-gray-50 flex border border-gray-200 rounded items-center mt-1">
-                                    <input type="text" name="identityNumber" id="identityNumber" placeholder="Identity Number" class="px-4 appearance-none outline-none text-gray-800 w-full bg-transparent" value="" formControlName="identityNumber" />
-                                </div>
-                            </div>
-                    
                             <div class="md:col-span-6 mt-4 text-right">
                                 <div class="inline-flex items-end">
-                                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
+                                    <button type="submit"
+                                        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Submit</button>
                                 </div>
                             </div>
 
