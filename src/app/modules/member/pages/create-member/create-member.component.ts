@@ -17,7 +17,6 @@ export class CreateMemberComponent {
   public formGroup: FormGroup = new FormGroup({
     name: new FormControl('', [Validators.required, Validators.nullValidator]),
     familyName: new FormControl('', [Validators.required, Validators.nullValidator]),
-    accessionDate: new FormControl('', [Validators.required, Validators.nullValidator]),
     nationality: new FormControl('', [Validators.required, Validators.nullValidator]),
     identityDocument: new FormControl('', [Validators.required, Validators.nullValidator]),
     identityNumber: new FormControl('', [Validators.required, Validators.nullValidator])
@@ -30,8 +29,8 @@ export class CreateMemberComponent {
           this.__router.navigate(["/members"]);
           this.__toast.success("Member Created Successfully");
         },
-        error: () => {
-          this.__toast.error("Sorry! something went wrong");
+        error: ({error}) => {
+          this.__toast.error(error.body.detail);
         }
       });
     }else {
