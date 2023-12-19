@@ -1,4 +1,4 @@
-<a routerLink="/competitions" [queryParams]="{competition: data.code}" queryParamsHandling="merge">
+<a routerLink="/competitions" routerLinkActive="bg-white p-3 w-full flex flex-col rounded-md dark:bg-gray-800 shadow-lg relative ring-2 ring-blue-500 focus:outline-none" [queryParams]="{competition: data.code}" queryParamsHandling="merge">
     <button class="bg-white p-3 w-full flex flex-col rounded-md dark:bg-gray-800 shadow">
     <div class="flex xl:flex-row flex-col items-center font-medium text-gray-900 dark:text-white pb-2 mb-2 xl:border-b border-gray-200 border-opacity-75 dark:border-gray-700 w-full capitalize">
         {{ data.location }}
